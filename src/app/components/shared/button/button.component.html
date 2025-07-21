@@ -1,4 +1,6 @@
 <span> <ng-content/> </span>
 <span class="icon">
-  <ng-content select="icon" />
+  <ng-content select="icon">
+    <!--  content projection feedback incase there is no icon -->
+  </ng-content>
 </span>
