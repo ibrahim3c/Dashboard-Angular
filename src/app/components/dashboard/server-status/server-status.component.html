@@ -1,4 +1,13 @@
-<div id="status">
+<!-- <div [class.status]="currentStatus==='online'"> -->
+
+  <!-- for multiple classes -->
+   <!-- status-online is wrong nameA but if u want to make class name with - put them in '' -->
+<div [class]="{
+status:true,
+'status-online':currentStatus==='online',
+'status-offline':currentStatus==='offline',
+'status-unknown':currentStatus==='unknown',
+}">
 @if (currentStatus === 'online') {
   <p>Servers are online</p>
   <p>All systems are operational.</p>
