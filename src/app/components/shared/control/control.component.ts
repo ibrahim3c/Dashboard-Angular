@@ -30,11 +30,11 @@ export class ControlComponent {
 
   @ContentChild("input")private control?:ElementRef<HTMLInputElement|HTMLTextAreaElement>;
 
-  
+
   onClick(){
-    console.log("clicked")
-    console.log(this.el)
-    console.log(this.control)
+    // console.log("clicked")
+    // console.log(this.el)
+    // console.log(this.control)
   }
 
 }

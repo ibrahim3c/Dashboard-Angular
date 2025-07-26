@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NewTicketComponent } from './new-ticket/new-ticket.component';
+import { Ticket } from '../../../models/ticket';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ticket',
@@ -9,5 +11,14 @@ import { NewTicketComponent } from './new-ticket/new-ticket.component';
   styleUrl: './ticket.component.css'
 })
 export class TicketComponent {
+  tickets:Ticket[]=[];
 
+  onAdd($event: { title: string; request: string; }) {
+    this.tickets.push( {
+      title:$event.title,
+      id:Math.random.toString(),
+      request:$event.request,
+      status:'open'
+    })
+  }
 }
